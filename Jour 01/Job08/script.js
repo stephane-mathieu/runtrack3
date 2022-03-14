@@ -1,8 +1,3 @@
-let nbr1 = 1
-let nbr2 = 2
-
-
-
 function sommenombrespremiers(nbr, nbr2) {
     for (var i = 2; i < nbr; i++) {
         if (nbr % i === 0) {
