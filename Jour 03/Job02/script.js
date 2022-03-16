@@ -1,5 +1,8 @@
 $(document).ready(() => {
-    $('#button').click(melange);
+    $('#button').click(function() {
+        melange()
+        $('#msg').remove();
+    });
 })
 
 function melange() {
@@ -18,7 +21,7 @@ function melange() {
     });
 }
 
-function togglediv(element) { //permet de  changer de place les div 
+function togglediv(element) { //permet de  changer de place les div
     if (element.parentNode.id == 'melangees') {
         $(element).appendTo('#rangees');
     } else {
