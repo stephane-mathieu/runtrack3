@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             });
     }
 
-    jsonValueKey("name")
+    jsonValueKey("city")
 
 
 })
