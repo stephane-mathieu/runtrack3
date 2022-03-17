@@ -4,23 +4,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
     function jsonValueKey(test) {
-        var keyapp = test;
-
-        // var name = test
-        // console.log(name)
         fetch(url)
             .then(response => response.json())
             .then(response => {
-
-                Object.keys(response).forEach(function(key) {
-                    if (key == keyapp) {
-                        return console.log(response[key])
-                    }
-                })
+                return console.log(response[test])
             });
     }
 
-    jsonValueKey("city")
+    jsonValueKey("name")
 
 
 })
