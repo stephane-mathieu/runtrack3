@@ -1,11 +1,11 @@
-"use strict ";
 document.addEventListener('DOMContentLoaded', (event) => {
 
     let btn = document.getElementById('filter')
+    let reset = document.getElementById('reset')
     let select = document.querySelector('select')
     let ul = document.querySelector('ul')
     let li = document.querySelector('li')
-    let allLi = document.querySelectorAll('li')
+    var body = document.querySelector('body')
     let typeList = []
 
 
@@ -32,30 +32,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
 
             btn.addEventListener("click", function() {
-                let type = document.querySelector('option')
+
+                let type = document.querySelector('option').innerHTML
+                let li = document.querySelector('li')
                 let choice = select.selectedIndex;
                 let valeur = select.options[choice].value;
-                let texte = select.options[choice].text;
-                console.log(texte)
-                for (let i = 0; i < response.length; i++) {
-                    if (texte == response[i].type) {
-                        console.log(select)
-                        console.log(response[i].type)
-                        let NewLi = document.createElement('li')
-                        NewLi.innerHTML = response[i].id + ' ' + response[i].name.french + ' ' + response[i].type
-                        ul.append(NewLi)
-                        if (ul) {
-                            ul.remove()
-                        }
-                    } else if (type == '-Selectionner un type-') {
-                        console.log(type)
-                        console.log('pas de type')
-                        let NewLi = document.createElement('li')
-                        NewLi.innerHTML = response[i].id + ' ' + response[i].name.french + ' ' + response[i].type
-                        ul.append(NewLi)
-                    }
+                let text = select.options[choice].text;
+                var newul = document.createElement('ul')
+                var ul = document.querySelector('ul')
 
+                for (let i = 0; i < response.length; i++) {
+                    if (text == response[i].type) {
+                        body.append(newul)
+                        let NewLi = document.createElement('li')
+                        NewLi.innerHTML = response[i].id + ' ' + response[i].name.french + ' ' + response[i].type
+                        newul.append(NewLi)
+                    }
                 }
+            })
+            reset.addEventListener("click", function() {
+                let ul = document.querySelector('ul')
+                ul.remove()
             })
         })
         .catch((error) => console.log(error))
