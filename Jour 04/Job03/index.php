@@ -13,10 +13,11 @@
 
     </select>
 
+    <input id ="id"type="text" placeholder="id"></input>
+    <input id ="nom"type="text" placeholder="nom"></input>
     <button id='filter'> Filtrer </button>
     <button id='reset'> Reset </button>
     <ul>
-
     </ul>
 </body>
 </html>
