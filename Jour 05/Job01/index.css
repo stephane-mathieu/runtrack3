@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    font-size: clamp(0.5em, 2vh, 1em);
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 30px;
+}
