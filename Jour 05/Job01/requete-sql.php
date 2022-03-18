@@ -1,5 +1,4 @@
 <?php
-require('Database.php');
 
 
 function findAllInfoUser($email): array{

@@ -6,8 +6,6 @@ if(isset($_SESSION['login'])){
     header('Location: index.php');
 }
 
-
-
 if(isset($_POST)) {
 
     if(!empty($_POST['email']) && !empty($_POST['password'])){
