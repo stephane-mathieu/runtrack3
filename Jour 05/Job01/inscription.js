@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let email = document.getElementById('email')
     var password = document.getElementById('password')
     var ConfPassword = document.getElementById('ConfPassword')
+    var inscription = document.getElementById('inscription')
 
     let regexLowerCase = /[a-z]{1,}/
     let regexUpperCase = /[A-Z]{1,}/
@@ -45,6 +46,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             p[0].textContent = 'Format Email incorrect'
             p[0].style.color = 'red'
         } else {
+            p[0].textContent = 'Email Valide'
+            p[0].style.color = 'green'
             console.log(email.value)
         }
     })
@@ -55,6 +58,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         } else {
             p[0].textContent = 'Mot de passe Valide'
             p[0].style.color = 'green'
+            console.log(ConfPassword.value)
         }
     })
     inscription.addEventListener('click', function() {
@@ -67,5 +71,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         fetch('traitement-register.php', { method: "POST", body: fd })
             .then(response => response.text())
             .then(data => console.log(data));
+
+        document.location.href = "traitement-register.php";
     })
 })

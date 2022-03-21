@@ -9,15 +9,17 @@ if(isset($_SESSION['login'])){
 
 $login = file_get_contents('php://input');
 
+// var_dump($login);
 var_dump($_POST);
 
 
-    $firstname = htmlspecialchars($_POST['prenom']);
-    $lastname = htmlspecialchars($_POST['nom']);
-    $email = htmlspecialchars($_POST['email']);
-    $password = htmlspecialchars($_POST['password']);
-    $checkemail = finInfoUser($email,$pdo);
-    $password_confirm = htmlspecialchars($_POST['ConfPassword']);
+
+    @$firstname = htmlspecialchars($_POST['prenom']);
+    @$lastname = htmlspecialchars($_POST['nom']);
+    @$email = htmlspecialchars($_POST['email']);
+    @$password = htmlspecialchars($_POST['password']);
+    @$checkemail = finInfoUser($email);
+    @$password_confirm = htmlspecialchars($_POST['ConfPassword']);
 
     $check = true;
 
@@ -25,20 +27,20 @@ var_dump($_POST);
         $check = false;
         $error_email = "Renseignez une adresse email.";
         $email = "";
-        echo "mail vide"."<br>";
+        // echo "mail vide"."<br>";
     }
 
     elseif(filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
         $valid=false;
         $error_email = "Votre email n'est pas au bon format : example@gmail.";
         $email="";
-        echo "Votre email n'est pas au bon format"."<br>";
+        // echo "Votre email n'est pas au bon format"."<br>";
     }
     if(count($checkemail) != 0){
         $check = false;
         $error_email = "Cet email est déjà utilisé.";
         $email = "";
-        echo "erreur mail utilisé"."<br>";
+        // echo "erreur mail utilisé"."<br>";
     }
 
 
@@ -47,24 +49,24 @@ var_dump($_POST);
         $error_password_confirm = "Les mots de passe ne correspondent pas.";
         $password = '';
         $password_confirm ='';
-        echo "error confirm password"."<br>";
+        // echo "error confirm password"."<br>";
     }
 
     if(empty($password)){
         $check = false;
         $error_password = "Renseignez votre mot de passe.";
         $password = '';
-        echo "error password vide"."<br>";
+        // echo "error password vide"."<br>";
     }elseif( strlen($password) < 8 ) {
         $check = false;
         $error_password = "Le mot de passe doit être au moins de 8 caractères.";
         $password = '';
-        echo "Le mot de passe doit être au moins de 10 caractères"."<br>";
+        // echo "Le mot de passe doit être au moins de 10 caractères"."<br>";
     }elseif(!preg_match('/^(?=.*\d)(?=.*[@#\-_$%^&+=§!\?])(?=.*[a-z])(?=.*[A-Z])[0-9A-Za-z@#\-_$%^&+=§!\?]/',$password)) {
         $error_password = "Le mot de passe ne respecte pas les conditions.";
         $check = false;
         $password='';
-        echo "Le mot de passe ne respecte pas les conditions"."<br>";
+        // echo "Le mot de passe ne respecte pas les conditions"."<br>";
 
     }
 
@@ -72,30 +74,21 @@ var_dump($_POST);
         $check = false;
         $error_password = "Renseignez votre lastname.";
         $password = '';
-        echo "error lastname vide"."<br>";
+        // echo "error lastname vide"."<br>";
     }
 
     if(empty($firstname)){
         $check = false;
         $error_password = "Renseignez votre firstname.";
         $password = '';
-        echo "error firstname vide";
+        // echo "error firstname vide";
        
     }
 
     if($check == true){
         $password = password_hash($password, PASSWORD_BCRYPT);
         InsertUser($firstname,$lastname,$email,$password);
-        echo "is good";
-        header("Location: connexion.php");
+        header('location: connexion.php');
     }
-
-
-    
-
-
-
-
-
 
 ?>

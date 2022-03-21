@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +10,7 @@ session_start();
     <title>Inscription</title>
 </head>
 <body>
+
     <label for="firstname">Nom</label>
     <input id ='firstname' name="firstname" type="text" placeholder="Nom">
     <p></p>
@@ -37,5 +35,6 @@ session_start();
     <p></p>
 
     <button id='inscription' type ='submit'> Inscription </button>
+
 </body>
 </html>

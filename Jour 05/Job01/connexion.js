@@ -49,11 +49,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     connexion.addEventListener('click', function() {
         let fd = new FormData();
-
         fd.append("email", email.value)
         fd.append("password", password.value)
         fetch('traitement-connexion.php', { method: "POST", body: fd })
             .then(response => response.text())
             .then(data => console.log(data));
+        document.location.href = "traitement-connexion.php";
     })
 })
