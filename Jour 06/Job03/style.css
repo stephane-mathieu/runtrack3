@@ -1,0 +1,48 @@
+.section {
+    width: 400px;
+    height: 200px;
+    background-color: #88c1d0;
+}
+
+@media screen and (min-width: 1680px) {
+    body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .section {
+        width: 100px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section {
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    .section {
+        width: 100px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid;
+    }
+}
