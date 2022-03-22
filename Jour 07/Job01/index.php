@@ -1,198 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">LPTF</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Accueil </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Units</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Job</a>
+                        <a class="nav-link" href="#">Jobs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Skills</a>
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Skills</a>
                     </li>
                 </ul>
             </div>
-        </nav>
-    </header>
-    <main>
-        <div class="text-center">
-            <h1>La Plateforme_</h1>
         </div>
-        <div class="d-flex justify-content-around">
-            <div class="col-2 justify-content-start">
+    </nav>
+</header>
+<main>
+        <section class="d-flex flex-column justify-content-around">
+            <h1 class="fw-lighter text-center">LaPlateforme_</h1>
+
+            <section class="d-flex justify-content-around">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Fgeo.2F2022.2F02.2F03.2Fdfb32bfd-9c18-4da3-a8b8-7472bc78ab2c.2Ejpeg/1150x647/background-color/ffffff/quality/70/texas-un-centre-de-protection-des-papillons-ferme-menace-par-des-partisans-de-trump.jpg" alt="Card image cap">
+                    <img src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Fgeo.2F2022.2F02.2F03.2Fdfb32bfd-9c18-4da3-a8b8-7472bc78ab2c.2Ejpeg/1150x647/background-color/ffffff/quality/70/texas-un-centre-de-protection-des-papillons-ferme-menace-par-des-partisans-de-trump.jpg" class="card-img-top" alt="papillon">
                     <div class="card-body">
-                        <h5 class="card-title">Un papillon</h5>
-                        <p class="card-text">Un Papillon c'est un peu comme une chenille mais avec des ailes. <br> Ne pas ingérer.</p>
+                        <h5 class="card-title">Un Papillon</h5>
+                        <p class="card-text">Un papillon, c'est un peu comme une chenille, mais avec des ailes.<br />Ne pas ingérer.</p>
                         <a href="#" class="btn btn-primary">Commander votre propre papillon</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-8 justify-content-center p-4" id='contenu'>
-                <div class="h1">
-                    Bonjour, Monde!
+
+                <div class="jumbotron alert-secondary">
+                    <div class="container">
+                        <h1 class="display-4">Bonjour, Monde!</h1>
+                        <p class="lead">Il existe plusieurs visions du terme :</p>
+                        <p class="lead">Le monde est la matière, l'espace est les phénomènes qui nous sont accessibles par les sens, l'expérience ou la raison.</p>
+                        <p class="lead">Le sens le plus courant désigne notre planète, la terre, avec ses habitants et son environnement plus ou moins naturel.</p>
+                        <hr class="my-4">
+                        <p class="fw-bolder">Le sens étendu désigne l'univers dans son ensemble.</p>
+                        <a class="btn btn-danger" href="#" role="button">Rebooter le monde</a>
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-end mb-5">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        
+                    </div>
                 </div>
-                <div class="p">
-                    Il existe plusieurs viesions du terme: <br>
-                    Le monde est la matiére, l'espace et les phénomènes qui nous sont accessibles par les sens, l'experience ou la raison. <br>
-                    Le sens le pluscourant désigne notre planète, la Terre, avec ses habitans, et son environnement plus ou moins naturel.
-                </div>
-                <hr>
-                <div class="h6 mt-4 mb-3">
-                    Le sens étendu désignel'universdans son ensemble.
-                </div>
-                <button type="button" class="btn btn-danger">
-                    Rebooter le Monde
-                </button>
-                <div class="spinner-border text-primary" role="status">
-                    <span class="sr-only"></span>
-                </div>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination mt-4 justify-content-end">
-                        <li class="page-item"><a class="page-link" href="#"><<</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">>></a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="">
-                <div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 200px;">
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item ">
-                            <a href="#" class="nav-link active" aria-current="page">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-                            Limbes
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark border-bottom">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-                            Luxure
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark border-bottom">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-                            Gourmandise
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark border-bottom">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-                            Avarice
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark border-bottom">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                            Colere
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark border-bottom">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                            Heresie
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark border-bottom">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                            Violence
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark border-bottom">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                            Ruse et Tromperie
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark border-bottom">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                            Trahison
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                            Internet explorer
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 d-flex justify-content-center mt-4">
-            <div class="col-5 d-flex flex-column justify-content-center">
-                <h6 class="text-end mb-0">Installation de AI 9000</h6>
+                <ul class="list-group">
+                    <li class="list-group-item active" aria-current="true">Limbes</li>
+                    <li class="list-group-item">Luxure</li>
+                    <li class="list-group-item">Gourmandise</li>
+                    <li class="list-group-item">Avarice</li>
+                    <li class="list-group-item">Colère</li>
+                    <li class="list-group-item">Heresie</li>
+                    <li class="list-group-item">Violence</li>
+                    <li class="list-group-item">Ruse et Tromperie</li>
+                    <li class="list-group-item">Trahison</li>
+                    <li class="list-group-item">Internet Explorer</li>
+                </ul>
+            </section>
+            <section class="container d-flex flex-column justify-content-center w-50">
+                <p class="fw-bolder mb-0 mt-4" style="margin-left: 76.6%;">Installation de AI 9000</p>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning " role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
                 </div>
-            </div>
-        </div>
-        <div class="d-flex justify-content-around mt-4 pb-5" id="page-form">
-            <div class="col-4">
-                <p class="h5">Recevz votre copie gratuite d'internet 2!</p>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">@</span>
-                    <input type="text" class="form-control" placeholder="Login" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Mot de passe" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <span class="input-group-text" id="basic-addon2">@example.com</span>
-                </div>
-                <label for="basic-url" class="form-label">URL des Internets 2 et 2.1 Beta</label>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Doge Coin</span>
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                    <span class="input-group-text">.00</span>
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                </div>
-            </div>
-            <div class="col-2">
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-        </div>
-    </main>
+            </section>
+            <section class="d-flex justify-content-around mt-3">
+                <section>
+                    <section class="d-flex flex-column justify-content-left w-60" >
+                        <form>
+                            <label class="form-label fw-bolder">Recevez votre copie gratuite d'internet 2!</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                                <input type="text" class="form-control" placeholder="Login" aria-label="Login" aria-describedby="basic-addon1">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Mot de Passe" aria-label="Mot de Passe" aria-describedby="basic-addon2">
+                                <span class="input-group-text" id="basic-addon2">@example.com</span>
+                            </div>
+
+                            <label for="basic-url" class="form-label">URL des Internets 2 et 2.1 bêta</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">DogeCoin</span>
+                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                <span class="input-group-text">.00</span>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon3">https://l33t.lptf/dkwb/berlusconimkt/</span>
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                            </div>
+                        </form>
+                    </section>
+                </section>
+                <section>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </section>
+            </section>
+        </section>
+</main>
 </body>
 </html>
