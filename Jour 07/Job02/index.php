@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                        <a class="nav-link active" aria-current="page" href="https://laplateforme.io/">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Units</a>
@@ -45,41 +46,62 @@
                     <div class="card-body">
                         <h5 class="card-title">Un Papillon</h5>
                         <p class="card-text">Un papillon, c'est un peu comme une chenille, mais avec des ailes.<br />Ne pas ingérer.</p>
-                        <a href="#" class="btn btn-primary">Commander votre propre papillon</a>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Commander votre propre papillon
+                        </button>
                     </div>
                 </div>
 
-                <div class="jumbotron alert-secondary">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Un Papillon</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Vous êtes sur le point d'acheter un papillon
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Confirmer</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="jumbotron alert-secondary  col-7">
                     <div class="container">
                         <h1 class="display-4">Bonjour, Monde!</h1>
-                        <p class="lead">Il existe plusieurs visions du terme :</p>
-                        <p class="lead">Le monde est la matière, l'espace est les phénomènes qui nous sont accessibles par les sens, l'expérience ou la raison.</p>
-                        <p class="lead">Le sens le plus courant désigne notre planète, la terre, avec ses habitants et son environnement plus ou moins naturel.</p>
+                        <div id="text" class="lead p ">
+                            Il existe plusieurs viesions du terme: <br>
+                            Le monde est la matiére, l'espace et les phénomènes qui nous sont accessibles par les sens, l'experience ou la raison. <br>
+                            Le sens le pluscourant désigne notre planète, la Terre, avec ses habitans, et son environnement plus ou moins naturel.
+                        </div>
                         <hr class="my-4">
                         <p class="fw-bolder">Le sens étendu désigne l'univers dans son ensemble.</p>
-                        <a class="btn btn-danger" href="#" role="button">Rebooter le monde</a>
+                        <button type="button" id="button" class="btn bg-danger">Rebooter le monde</button>
                         <div class="spinner-border text-primary" role="status">
                             <span class="visually-hidden"></span>
                         </div>
-
+                        <div id="TableList"></div>
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-end mb-5">
                                 <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
+                                    <a id="previous" class="page-link" href="javascript:prevPage()" aria-label="Previous">
                                         <span aria-hidden="true">&laquo;</span>
                                     </a>
                                 </li>
-                                <li class="page-item"><a class="page-link" href="">1</a></li>
-                                <li class="page-item"><a class="page-link" href="">2</a></li>
-                                <li class="page-item"><a class="page-link" href="">3</a></li>
+                                <li id="text1"class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li id="text2" class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li id="text3" class="page-item"><a class="page-link" href="#">3</a></li>
                                 <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
+                                    <a id="next" class="page-link" href="javascript:nextPage()" aria-label="Next">
                                         <span aria-hidden="true">&raquo;</span>
                                     </a>
                                 </li>
                             </ul>
                         </nav>
-                        
                     </div>
                 </div>
                 <ul class="list-group">
