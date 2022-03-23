@@ -18,14 +18,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let arrowL = document.getElementById('arrowL')
     let arrowR = document.getElementById('arrowR')
     let submit = document.getElementById('submit')
+    let password = document.getElementById('password')
+    let email = document.getElementById('email')
+    let load = document.getElementById('loading')
 
     btn_reboot.addEventListener('click', function() {
-
-        let arrayTxt = ["Dommage qu'elle doive mourir, mais c'est notre lot à tous.", "T'endors pas, c'est l'heure de mourir demain", "J'ai vu tant de choses que vous, humains, ne pourriez pas croire. ...", " Le commerce est notre seul but chez Tyrell. ..."]
-
-        const random = Math.floor(Math.random() * arrayTxt.length);
-        text_jumbotron.innerHTML = arrayTxt[random]
-        console.log(text);
+        text_jumbotron.innerHTML = 'Chaque fois qu\'une lumière brûle deux fois plus, elle brille deux fois moins longtemps. Et vous avez brûlé on ne peut plus brillamment, Roy.'
     })
 
     btn1.addEventListener('click', function() {
@@ -55,7 +53,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     })
 
     submit.addEventListener('click', function() {
-
+        if (email.value != '' && password.value != '') {
+            console.log('ok')
+            load.classList.remove('text-primary')
+            load.classList.add('text-warning')
+        } else {
+            alert('Remplir les champs Email et mot de passe')
+        }
     })
 
     li1.addEventListener('click', function() {
@@ -214,4 +218,5 @@ function DGC() {
             }
         }
     }
+
 }
